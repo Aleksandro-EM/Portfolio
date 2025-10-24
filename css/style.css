@@ -591,10 +591,14 @@ main {
 
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 3rem auto;
     max-width: 900px;
+}
+
+.contact-card:last-child {
+    grid-column: 2 / 3;
 }
 
 .contact-card {
@@ -740,6 +744,14 @@ footer .socials a:hover {
 
     .experience-date {
         text-align: left;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card:last-child {
+        grid-column: 1;
     }
 }
 
